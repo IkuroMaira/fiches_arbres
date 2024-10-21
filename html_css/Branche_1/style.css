@@ -1,0 +1,20 @@
+body {
+    background-color: pink;
+    text-align: center;
+}
+
+h1, p, ul {
+    color: hotpink;
+    font-family: "Comic Sans MS";
+}
+
+ul {
+    margin: auto;
+    width: fit-content;
+    text-align: left;
+}
+
+img {
+    border-radius: 50%;
+    border: 5px solid hotpink;
+}
