@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FDD8D0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.photo-container {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 80%;
+    text-align: center;
+}
+.photo-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.photo-caption {
+    padding: 15px;
+    background-color: #fff;
+}
+.photo-caption h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+.photo-caption p {
+    margin: 5px 0 0;
+    color: #777;
+}
+a{
+    text-decoration: none;
+}
