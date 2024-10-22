@@ -6,13 +6,20 @@ let count = 0;
 
 // Ici on ajoute un évènement sur le bouton
 getCounter.addEventListener('click', () => {
+    // Ici l'évènement se passe au clic
     // à chaque clique on incrément
-    for (let i = 0; i < 12 ; i++) {
-        get
-    }
-    // on modifie le texte à l'intérieur du bouton avec le nouvelle valeur de cont
+    count++; // Incrémente la variable de 1
+    console.log(count); // J'affiche dans le console la valeur de la variable count
+    getCounter.innerText = count + " clics"; // je modifie le texte du bouton en lui attribuant la valeur de la variable count
 })
 
-// TEST_______________________________________
-let getBtn = document.getElementById("test");
-getBtn.addEventListener("click", displayDate);
+// TEST 1_______________________________________
+//Je récupère le bouton
+// let getBtn = document.getElementById("test");
+// Quand je clique une fenêtre alerte s'affiche
+// getBtn.addEventListener("click",() => {
+//     for (count = 0; count <= 3; count++) {
+//         alert(count)
+//         getBtn.innerText = count; // OK
+//     }
+// });

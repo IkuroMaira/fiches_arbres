@@ -1,0 +1,24 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;  /* Centre horizontalement */
+    align-items: center;      /* Centre verticalement */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none; /* Enlever la bordure par défaut */
+    background-color: #4CAF50; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte */
+    border-radius: 5px; /* Bords arrondis (optionnel) */
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2); /* Ombre */
+    cursor: pointer; /* Changement de curseur sur hover */
+    transition: box-shadow 0.3s ease; /* Transition pour un effet doux */
+}
+
+/* Effet d'ombre plus prononcé quand on survole le bouton */
+button:hover {
+    box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.3);
+}
