@@ -119,7 +119,7 @@ for (const item of horoscope) {
     const h2 = document.createElement('h2');
     const p = document.createElement('p');
 
-    h2.innerText = item.sign;
+    h2.innerHTML = item.sign;
     p.innerText = item.description;
 
     article.appendChild(h2);
