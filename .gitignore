@@ -1,2 +1,10 @@
 .idea
 .DS_Store
+
+# Dépendances node.js
+node_modules/
+node_modules/*
+
+# Fichiers de package managers
+package-lock.json
+package.json
