@@ -1,0 +1,1 @@
+Il est necéssaire d'installer le framework Vitest.
