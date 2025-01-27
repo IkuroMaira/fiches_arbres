@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+body {
+    margin: auto;
+    font-family: "Instrument Serif", serif;
+    letter-spacing: 0.5rem;
+}
+
+h1 {
+    margin-bottom: 0;
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+    margin: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+img {
+    margin: 0.2rem;
+}
+
+main {
+    width: 80vw;
+    margin: 1rem auto;
+
+    display: flex;
+    flex-wrap: wrap;
+}
