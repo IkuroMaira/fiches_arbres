@@ -83,10 +83,10 @@ p {
     color: var(--clr-desatured-red);
 }
 
-.input-container {
+.input-form {
     border: 2px solid var(--clr-desatured-red);
     border-radius: 30px;
-    height: 2rem;
+    height: 2.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -107,6 +107,23 @@ input::placeholder {
     color: var(--clr-desatured-red);
 }
 
+input:valid {
+    border: 2px solid var(--clr-desatured-red);
+}
+
+input:invalid {
+    border-color: var(--clr-soft-red);
+}
+
+.icon-error {
+    display: none;
+    margin: 0 1rem 0 1rem;
+}
+
+input:invalid:not(:placeholder-shown) + .error-message {
+    display: block;
+}
+
 .btn-submit {
     background: linear-gradient(var(--gradient-2));
     border: none;
@@ -116,6 +133,14 @@ input::placeholder {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+
+.error-message {
+    display: none;
+    font-size: 0.7rem;
+    color: var(--clr-soft-red);
+    margin-left: 1rem;
 }
 
 footer {
@@ -126,7 +151,8 @@ footer {
 /*   MEDIA QUERIES   */
 /* ================= */
 
-@media screen and (min-width: 426px) {
+@media screen and (min-width: 570px) {
+/*@media screen and (min-width: 426px) {*/
     body {
         display: grid;
         /*grid-template-columns: 1fr 1fr;*/
@@ -181,7 +207,7 @@ footer {
         line-height: 1.8;
     }
 
-    .input-container {
+    .input-form {
         height: 3.5rem;
         margin-bottom: 2rem;
     }

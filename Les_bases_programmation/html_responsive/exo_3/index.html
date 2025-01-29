@@ -39,11 +39,15 @@
         Email Address
       </p>
 
-      <div class="input-container">
-        <input type="email" name="email" class="input-email" placeholder="Email Adress" required="">
-        <button type="submit" class="btn-submit">
-          <img src="./images/icon-arrow.svg" alt="icône flèche">
-        </button>
+      <div class="container-input">
+        <form class="input-form">
+          <input type="email" name="email" class="input-email" placeholder="Email Adress" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+          <img src="images/icon-error.svg" alt="Icône erreur" class="icon-error">
+          <button type="submit" class="btn-submit">
+            <img src="./images/icon-arrow.svg" alt="icône flèche">
+          </button>
+        </form>
+        <span class="error-message">Veuillez entrer une adresse email valide</span>
       </div>
     </div>
   </main>
