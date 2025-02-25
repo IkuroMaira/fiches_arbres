@@ -107,11 +107,11 @@ input::placeholder {
     color: var(--clr-desatured-red);
 }
 
-input:valid {
+.input-form:valid {
     border: 2px solid var(--clr-desatured-red);
 }
 
-input:invalid {
+.input-form:invalid {
     border-color: var(--clr-soft-red);
 }
 
@@ -120,7 +120,11 @@ input:invalid {
     margin: 0 1rem 0 1rem;
 }
 
-input:invalid:not(:placeholder-shown) + .error-message {
+.input-form:invalid + .error-message {
+    display: block;
+}
+
+input:invalid + .icon-error {
     display: block;
 }
 
