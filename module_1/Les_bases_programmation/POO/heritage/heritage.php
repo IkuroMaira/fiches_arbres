@@ -34,7 +34,7 @@ class Croiseur extends Vaisseaux
         $total = $this->nbrPassagers + $nbrNouveauxPassagers;
 
         if ($total > $this->capaciteMax) {
-            echo "Le nombre maximum est atteint";
+            echo "On charge " . $nbrNouveauxPassagers . ". Le nombre maximum est atteint";
             echo "<br>";
         } else if ($total < $this->capaciteMax){
             $placesRestantes = $this->capaciteMax - $nbrNouveauxPassagers;
@@ -45,6 +45,7 @@ class Croiseur extends Vaisseaux
         }
     }
 
+    // Cette méthode n'est pas utilisée
     public function decharger($nbrHommes)
     {
         echo "On décharge " . $nbrHommes . " hommes";
@@ -55,46 +56,52 @@ class Intercepteur extends Vaisseaux
 {
     public $nbrCanons;
     public $type = "Intercepteur";
+    public $nbrTire;
 
     public function __construct($name, $taille, $nbrCanons)
     {
         parent::__construct($name, $taille);
         $this->nbrCanons = $nbrCanons;
+        $this->nbrTire = 0;
     }
 
     public function tirer()
     {
-        echo "On tire !";
+        // La condition est à 2 car on incrémente après et si on met 3 (nombre max de tire) il va encore tirer
+        if ( $this->nbrTire < 2) {
+            $this->nbrTire += 1;
+            echo "On tire !\n";
+        } else {
+            echo "On en peut plus tirer ! Il faut recharger !\n";
+        }
     }
 
     public function recharger()
     {
-        echo "On charge !";
+        $this->nbrTire =0;
     }
 }
 
-$croiseur1 = new Croiseur("Acclamator", 752, 700);
-print_r($croiseur1);
-echo "<br>";
-$croiseur1->charger(600);
-$croiseur1->charger(200);
-
-$croiseur2 = new Croiseur("Corvette", 150, 165);
-print_r($croiseur2);
-echo "<br>";
-$croiseur2->charger(100);
-
-$intercepteur1 = new Intercepteur("X-wing", 12.5, 2);
-print_r($intercepteur1);
-
-function DisplayTypeVaisseau($vaisseauName, $vaisseauType, $taille, $nombreHommes, $nbrCanons) {
+function DisplayTypeVaisseau($vaisseauName, $vaisseauType, $taille, $capaciteMax, $nbrCanons) {
     if ($vaisseauType === "croiseur") {
-        $croiseur = new Croiseur($vaisseauName, $taille, $nombreHommes);
         print_r($croiseur);
-    } elseif ($vaisseauType === "intercepteur") {
+        echo "<br >";
+        $croiseur = new Croiseur($vaisseauName, $taille, $capaciteMax);
+        $croiseur->charger(600);
+        $croiseur->charger(200);
+        echo "<br >";
+    } else if ($vaisseauType === "intercepteur") {
         $intercepteur = new Intercepteur($vaisseauName, $taille, $nbrCanons);
+        echo "<br >";
         print_r($intercepteur);
+        $intercepteur->tirer();
+        $intercepteur->tirer();
+        $intercepteur->tirer();
+        $intercepteur->recharger();
+        $intercepteur->tirer();
+        echo "<br >";
     }
 }
 
-//DisplayTypeVaisseau();
+DisplayTypeVaisseau("Acclamator", "croiseur", 752, 700, 0);
+DisplayTypeVaisseau("X-wing", "intercepteur", 12,5, 2);
