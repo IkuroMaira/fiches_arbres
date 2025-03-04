@@ -76,7 +76,6 @@ class Epargne implements Compte {
         if ($montant > 200) {
             $this->solde += $montant;
         }
-
         return $this->solde;
     }
 

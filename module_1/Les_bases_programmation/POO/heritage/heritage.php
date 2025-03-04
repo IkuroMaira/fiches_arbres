@@ -4,9 +4,9 @@
 // Super-classe
 class Vaisseaux
 {
-    public $name;
-    public $type;
-    public $taille;
+    protected $name;
+    protected $type;
+    protected $taille;
 
     public function __construct($name, $taille)
     {
@@ -18,9 +18,9 @@ class Vaisseaux
 // Sous-classes
 class Croiseur extends Vaisseaux
 {
-    public $type = "croiseur";
-    public $capaciteMax;
-    public $nbrPassagers;
+    protected $type = "croiseur";
+    protected $capaciteMax;
+    protected $nbrPassagers;
 
     public function __construct($name, $taille, $capaciteMax)
     {
@@ -54,9 +54,9 @@ class Croiseur extends Vaisseaux
 
 class Intercepteur extends Vaisseaux
 {
-    public $nbrCanons;
-    public $type = "Intercepteur";
-    public $nbrTire;
+    protected $nbrCanons;
+    protected $type = "Intercepteur";
+    protected $nbrTire;
 
     public function __construct($name, $taille, $nbrCanons)
     {
@@ -84,9 +84,9 @@ class Intercepteur extends Vaisseaux
 
 function DisplayTypeVaisseau($vaisseauName, $vaisseauType, $taille, $capaciteMax, $nbrCanons) {
     if ($vaisseauType === "croiseur") {
-        print_r($croiseur);
         echo "<br >";
         $croiseur = new Croiseur($vaisseauName, $taille, $capaciteMax);
+        print_r($croiseur);
         $croiseur->charger(600);
         $croiseur->charger(200);
         echo "<br >";
