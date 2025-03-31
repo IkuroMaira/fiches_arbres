@@ -1,0 +1,9 @@
+{
+  "name": "integration_continue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fizzbuzz.js",
+  "scripts": {
+    "test": "node --test"
+  }
+}
