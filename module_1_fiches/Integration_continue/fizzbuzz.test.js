@@ -13,3 +13,7 @@ test('fizzbuzz(15)', (t) => {
 test('fizzbuzz(1)', (t) => {
     assert.strictEqual(fizzbuzz(1), 1);
 });
+
+test('fizzbuzz(20)', (t) => {
+    assert.strictEqual(fizzbuzz(20), "Buzz");
+});
