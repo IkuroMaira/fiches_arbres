@@ -2,7 +2,7 @@
   "name": "integration_continue",
   "version": "1.0.0",
   "description": "",
-  "main": "fizzbuzz.js",
+  "main": "/module_1_fiches/Integration_continue/fizzbuzz.js",
   "scripts": {
     "test": "node --test"
   }
