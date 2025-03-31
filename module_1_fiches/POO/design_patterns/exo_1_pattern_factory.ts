@@ -2,6 +2,7 @@
 interface MainCharacter {
     getFullName(): string;
 }
+
 // Implémentation de l'interface MainCharacter
 class MainCharacterImpl implements MainCharacter {
     private nom: string;
@@ -14,6 +15,7 @@ class MainCharacterImpl implements MainCharacter {
         return `${this.prenom} ${this.nom}`;
     }
 }
+
 // Classe abstraite pour représenter un manga
 abstract class Manga {
     protected titre: string;
@@ -35,6 +37,7 @@ abstract class Manga {
         return `Ce ${this.getStringType()} s'appelle ${this.titre} et son personnage principal est ${this.mainCharacterPrincipal.getFullName()}`;
     }
 }
+
 // Classe Shojo qui hérite de Manga
 class Shojo extends Manga {
     constructor(titre: string, mainCharacterPrincipal: MainCharacter) {
@@ -44,6 +47,7 @@ class Shojo extends Manga {
         return “shojo”;
     }
 }
+
 // Classe Shonen qui hérite de Manga
 class Shonen extends Manga {
     constructor(titre: string, mainCharacterPrincipal: MainCharacter) {
@@ -53,11 +57,13 @@ class Shonen extends Manga {
         return “shonen”;
     }
 }
+
 // Enum pour le type de manga
 enum TypeManga {
     SHOJO = "SHOJO",
     SHONEN = "SHONEN"
 }
+
 // Exemple d'utilisation
 const luffy = new MainCharacterImpl("Monkey D.", "Luffy");
 const onePiece = new Shonen("One Piece", luffy);
